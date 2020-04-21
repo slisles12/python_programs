@@ -1,8 +1,10 @@
 
 def member_var(obj, prop):
-    """ If obj has a property named prop, then return the value
-        Otherwise, return None
-    """
-    # TODO: complete this method with the instructor
+    if prop in dir(obj): 
+        return getattr(obj, prop)
+    else:
+        return None
 
-        
+x = 7
+print(member_var(x, "real"))      
+print(member_var(x, "not_here"))    
